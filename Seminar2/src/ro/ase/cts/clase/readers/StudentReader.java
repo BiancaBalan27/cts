@@ -10,7 +10,7 @@ import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.Student;
 
 public class StudentReader extends Reader {
-	
+
 	public StudentReader(String filename) {
 		super(filename);
 	}
@@ -21,13 +21,13 @@ public class StudentReader extends Reader {
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
 
 		while (input.hasNext()) {
-			Student s = new Student();
-			super.readAplicant(s, input);
+			Student student = new Student();
+			super.readAplicant(student, input);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
-			s.setAn_studii(an_studii);
-			s.setFacultate(facultate);
-			studenti.add(s);
+			student.setAn_studii(an_studii);
+			student.setFacultate(facultate);
+			studenti.add(student);
 		}
 		input.close();
 		return studenti;
