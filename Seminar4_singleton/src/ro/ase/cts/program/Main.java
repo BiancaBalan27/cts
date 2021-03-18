@@ -1,5 +1,6 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.clase.Biblioteca;
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
 
@@ -20,6 +21,12 @@ public class Main {
 		
 		System.out.println(ml1.toString());
 		System.out.println(ml2.toString());
+		
+		Biblioteca biblioteca1 = Biblioteca.getInstance(575, "Mihai Eminescu", true);
+		Biblioteca biblioteca2 = Biblioteca.getInstance(474, "Ion Creanga", false);
+		
+		System.out.println(biblioteca1.toString());
+		System.out.println(biblioteca2.toString());
 	}
 
 }
