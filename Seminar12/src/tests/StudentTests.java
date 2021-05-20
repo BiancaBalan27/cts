@@ -1,6 +1,6 @@
 package tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; //JUnit4
 
 import org.junit.Test;
 
@@ -50,6 +50,46 @@ public class StudentTests {
 		int nota = 7;
 		student.adaugaNota(nota);
 		assertEquals(nota, student.getNota(0));
+	}
+	
+	@Test
+	public void testCalculeazaMedia() {
+		Student student = new Student();
+		student.adaugaNota(5);
+		student.adaugaNota(6);
+		assertEquals(5.5, student.calculeazaMedie(), 0.01);
+	}
+	
+	@Test
+	public void testCalculeazaMedieFaraNote() {
+		Student student = new Student();
+		assertEquals(0, student.calculeazaMedie(), 0.01);
+	}
+	
+	@Test
+	public void testCalculeazaMedieONota() {
+		Student student = new Student();
+		student.adaugaNota(8);
+		assertEquals(8, student.calculeazaMedie(), 0.01);
+	}
+	
+	@Test
+	public void testAdaugaNotaIncorecta() {
+		Student student = new Student();
+		int nota = 14;
+		try {
+			student.adaugaNota(nota);
+			fail("Nu trebuia sa ajunga aici. Metoda trebuia sa arunce o exceptie");
+		} catch(IllegalArgumentException err) {
+			
+		}
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testAdaugaNotaIncorectaJU4() {
+		Student student = new Student();
+		int nota = 14;
+		student.adaugaNota(nota);
 	}
 
 }
