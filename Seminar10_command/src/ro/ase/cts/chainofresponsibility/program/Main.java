@@ -1,10 +1,10 @@
-package ro.ase.cts.chainofresponsability.program;
+package ro.ase.cts.chainofresponsibility.program;
 
-import ro.ase.cts.chainofresponsability.clase.Cont;
-import ro.ase.cts.chainofresponsability.clase.ContCredit;
-import ro.ase.cts.chainofresponsability.clase.ContCurent;
-import ro.ase.cts.chainofresponsability.clase.ContEconomii;
-import ro.ase.cts.chainofresponsability.clase.ContIndisponibil;
+import ro.ase.cts.chainofresponsibility.clase.Cont;
+import ro.ase.cts.chainofresponsibility.clase.ContCredit;
+import ro.ase.cts.chainofresponsibility.clase.ContCurent;
+import ro.ase.cts.chainofresponsibility.clase.ContEconomii;
+import ro.ase.cts.chainofresponsibility.clase.ContIndisponibil;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package ro.ase.cts.chainofresponsability.clase;
+package ro.ase.cts.chainofresponsibility.clase;
 
 public abstract class Cont {
 	private String detinator;
